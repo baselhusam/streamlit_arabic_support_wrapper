@@ -2,7 +2,7 @@ import streamlit as st
 from arabic_support import support_arabic_text
 
 # ------------- PAGE CONFIG -------------
-st.set_page_config(page_title="تجربة دعم اللغة العربية", page_icon="🧊")
+st.set_page_config(page_title="Arabic Support Wrapper", page_icon="🧊")
 
 support_arabic_text(all=True)
 
