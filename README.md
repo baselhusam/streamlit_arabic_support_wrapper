@@ -18,6 +18,8 @@ You can install the package using pip:
 pip install streamlit-arabic-support-wrapper
 ```
 
+Visit the Official Package Site in PyPI [here](https://pypi.org/project/streamlit-arabic-support-wrapper/) 
+
 ## Usage
 First, import the support_arabic_text function from the package and use it in your Streamlit application. Here's an example of how to use it:
 
