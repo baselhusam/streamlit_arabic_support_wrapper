@@ -35,6 +35,8 @@ st.title("تجربة دعم اللغة العربية")
 st.write("هذا التطبيق يوضح كيفية دعم اللغة العربية في Streamlit.")
 ```
 
+Or, You can check the following web application for the Package information as example: [Streamlit Arabic Support Wrapper Example App](https://arabic-support.streamlit.app/)
+
 ## Supported Components
 
 - **Text displays**: **`st.write`**, **`st.markdown`**
