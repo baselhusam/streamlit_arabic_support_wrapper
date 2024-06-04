@@ -155,7 +155,7 @@ dmypy.json
 cython_debug/
 
 # __pycache__ directories in arabic_support directory
-./arabic_support/__pycache__/
+arabic_support/__pycache__/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
