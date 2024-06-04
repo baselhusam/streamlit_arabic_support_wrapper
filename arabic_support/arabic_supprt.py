@@ -1,104 +1,77 @@
+"""
+This Module provides functions to support Arabic alignment in Streamlit components.
+It supports different Streamlit components such as text inputs, select boxes, alerts, and more.
+
+Created on: May 2 2024
+Author: Basel Husam
+"""
 import streamlit as st
 
-def ara_markdown():
-    st.html("""<style>
-.stMarkdown {
+def ara_template(html_component: str) -> None:
+    """
+    This function creates a CSS template for Arabic alignment.
+
+    Parameters:
+    ----------
+    html_component: str
+        The HTML component to apply the CSS template to.
+
+    Returns:
+    -------
+    None
+    Instead, it will apply the necessary CSS to support Arabic alignment
+    in the specified HTML component.
+    """
+    html_pattern = f"""
+<style>
+{html_component} {{
     direction: rtl;
+    unicode-bidi: bidi-override;
     text-align: right;
-}
-</style>""", )
-    
+}}
+</style>
+"""
+    st.html(html_pattern)
+
+def ara_markdown():
+    ara_template(".stMarkdownContainer")
+    ara_template(".stMarkdown")
+    ara_template(".stHeadingWithActionElements")
+
+
 def ara_selectbox():
-    st.html("""
-<style>
-.stSelectbox {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
-    st.html("""
-<style>
-.stTooltipHoverTarget {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template(".stSelectbox")
+    ara_template(".stTooltipHoverTarget")
 
-    
+
 def ara_textinput():
-    st.html("""
-<style>
-.stTextInput {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template(".stTextInput")
+
+
 def ara_multiselect():
-    st.html("""
-<style>
-.stMultiSelect {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template(".stMultiSelect")
+
+
 def ara_input():
-    st.html("""
-<style>
-input, label, {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template("input")
+    ara_template("label")
+
+
 def ara_alert():
-    st.html("""
-<style>
-.stAlert {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template(".stAlert")
+
+
 def ara_textarea():
-    st.html("""
-<style>
-.stTextArea {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
-    
+    ara_template(".stTextArea")
+
+
 def ara_expander():
-    st.html("""
-<style>
-.stMarkdownContainer, stExpander {
-    direction: RTL;
-    unicode-bidi: bidi-override;
-    text-align: right;
-}
-</style>
-""", )
+    ara_template(".stMarkdownContainer")
+    ara_template("stExpander")
 
 
-def support_all():
+
+def support_all() -> None:
     """
     This function supports Arabic alignment in all Streamlit components.
 

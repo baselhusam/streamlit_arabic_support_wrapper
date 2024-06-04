@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setuptools.setup(
     name="streamlit_arabic_support_wrapper",
-    version="1.0",
+    version="1.1",
     author="Basel Husam",
     author_email="baselmathar@gmail.com",
     description="A simple component to perfectly align Arabic text in Streamlit Apps.",

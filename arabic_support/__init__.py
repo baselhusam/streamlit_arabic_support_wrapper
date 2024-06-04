@@ -6,7 +6,7 @@ Author: @Basel Husam
 from . import arabic_supprt as ara
 
 def support_arabic_text(
-        components: list = [], 
+        components: list = [],
         all: bool = False
     ) -> None:
     """
@@ -15,8 +15,8 @@ def support_arabic_text(
     Parameters:
     ----------
     components: list
-        A list of components to support. 
-        Supported components: alert, input, markdown, multiselect, selectbox, 
+        A list of components to support.
+        Supported components: alert, input, markdown, multiselect, selectbox,
         textinput, textarea, expander.
     all: bool
         If True, it will support all components.
@@ -60,6 +60,6 @@ def support_arabic_text(
                 ara.ara_expander()
             else:
                 raise ValueError(f"""
-Unsupported component: {component} \nSupported components: alert, input, markdown, 
+Unsupported component: {component} \nSupported components: alert, input, markdown,
 multiselect, selectbox, textinput \nYou can also use support_all() to support all components.
 \nCheck the documentation for more information.""")
